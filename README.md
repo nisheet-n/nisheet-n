@@ -1,16 +1,36 @@
-### Hi there 👋
+<h3 align="center">👋 Hieee there 😇</h3>
 
-<!--
-**nisheet-n/nisheet-n** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h1 align="center" style="color: red;">I am Nisheet</h1>
+<h5 align="center">💻 Computer Science student currently in 2nd year. 🧮</h5>
+<hr>
 
-Here are some ideas to get you started:
+<h3>🔭 Currently learning and working on: 🌱</h3>
+ - 💛  JavaScript <br>
+ - 🧡  React <br>
+ - 💙  Django <br>
+ - 💚  Java <br>
+ - 🤎  PHP <br>
+ - ✨  Other Cool Stuff <br>
+<br>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<h3>👯 Looking to collaborate on some basic projects 🤔</h3>
+<br>
+
+<h3>🙌 I like: 🎉</h3>
+ - 🎨  Drawing <br>
+ - 🎹  Instrumentals <br>
+ - 🏸  Games <br>
+ - 😛  You! <br>
+<br>
+
+<h3>📫 How to reach me: 💬</h3>
+- <b>🔃 LinkedIn: </b> https://www.linkedin.com/in/nisheet-n-631951200/ <br>
+- <b>💌 Mail: </b> 1905837@kiit.ac.in <br>
+<br>
+
+<h3>⚡ Fun fact: 😄</h3>
+🎈 Wish me in August 🎂
+</p>
+<br>
+
+<h5 align="center">💤😴</h5>

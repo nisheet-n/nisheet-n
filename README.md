@@ -11,26 +11,27 @@
  - 💚  Java <br>
  - 🤎  PHP <br>
  - ✨  Other Cool Stuff <br>
-<br>
+
 
 <h3>👯 Looking to collaborate on some basic projects 🤔</h3>
-<br>
+
 
 <h3>🙌 I like: 🎉</h3>
  - 🎨  Drawing <br>
  - 🎹  Instrumentals <br>
  - 🏸  Games <br>
  - 😛  You! <br>
-<br>
+
 
 <h3>📫 How to reach me: 💬</h3>
 - <b>🔃 LinkedIn: </b> https://www.linkedin.com/in/nisheet-n-631951200/ <br>
 - <b>💌 Mail: </b> 1905837@kiit.ac.in <br>
-<br>
+
 
 <h3>⚡ Fun fact: 😄</h3>
 🎈 Wish me in August 🎂
 </p>
 <br>
+
 
 <h5 align="center">💤😴</h5>

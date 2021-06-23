@@ -1,7 +1,7 @@
 <h3 align="center">👋 Hieee there 😇</h3>
 
 <h1 align="center" style="color: red;">I am Nisheet</h1>
-<h5 align="center">💻 Computer Science student currently in 2nd year. 🧮</h5>
+<h5 align="center">💻 Computer Science student currently in 3rd year. 🧮</h5>
 <hr>
 
 <h3>🔭 Currently learning and working on: 🌱</h3>
@@ -28,10 +28,10 @@
 - <b>💌 Mail: </b> 1905837@kiit.ac.in <br>
 
 
-<h3>⚡ Fun fact: 😄</h3>
+<!-- <h3>⚡ Fun fact: 😄</h3>
 🎈 Wish me in August 🎂
-</p>
-<br>
+</p> -->
 
+<br>
 
 <h5 align="center">💤😴</h5>

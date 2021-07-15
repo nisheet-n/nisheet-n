@@ -8,7 +8,8 @@
  - 💛  JavaScript <br>
  - 🧡  React <br>
  - 💙  Django <br>
- - 💚  Java <br>
+ - 💚  Node <br>
+ - 🤍  Java <br>
  - 💜  TailWind <br>
  - 🤎  PHP <br>
  - ✨  Other Cool Stuff <br>

@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+html {
+	line-height: 1;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	line-height: 1.5;
+	color: #555;
+	font-family: 'Nunito Sans', sans-serif
+}
+
+.header {
+	display: block;
+	z-index: 1;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	font-family: 'Rubik', sans-serif;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	margin: 0 auto;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%)
+}
+
+.header .site-title {
+	display: block;
+	line-height: 2;
+	color: #ffd9e2;
+	font-size: 5rem;
+	text-shadow: 0 0 10px #2B32B2, 0 0 20px #2B32B2, 0 0 40px #a5a5a5, 0 0 100px #a5a5a5, 0 0 200px #a5a5a5;
+	-webkit-animation: blink 4s infinite alternate;
+	animation: blink 4s infinite alternate;
+}
+
+.header-icons {
+	display: flex;
+	justify-content: center;
+	text-align: center
+}
+
+.header-icons .icon {
+	height: 25px;
+	padding: 15px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	transition: all .8s;
+	width: 25px;
+	font-size: 25px;
+	margin: 2px;
+	background: #1488CC;
+	color: #000;
+}
+
+.header-icons .icon-link {
+	margin: 15px;
+}
+
+.header-icons .icon:active, .header-icons .icon:hover {
+	color: #1488CC;
+	background: #fff
+}
+
+#landing {
+	background: #1488CC;
+	background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+	background: linear-gradient(to right, #2B32B2, #1488CC);
+	display: flex;
+	vertical-align: bottom;
+	width: 100%;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed
+}
+
+#landing .landing-canvas-el {
+	width: 100% !important;
+	height: 100vh !important
+}

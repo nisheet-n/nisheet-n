@@ -3,14 +3,13 @@
 html {
 	line-height: 1;
 	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
-	line-height: 1.5;
 	color: #555;
 	font-family: 'Nunito Sans', sans-serif
 }
@@ -84,4 +83,116 @@ body {
 #landing .landing-canvas-el {
 	width: 100% !important;
 	height: 100vh !important
+}
+
+.timeline-center {
+	width: 80vw;
+	max-width: 40rem;
+}
+
+.timeline-item {
+	border-top: 3px dashed #1488CC;
+	margin: 0;
+	padding: 1rem 3rem 3rem 3rem;
+	position: relative;
+}
+
+.timeline-year {
+	text-align: right;
+}
+
+.timeline-month {
+	margin-top: 2rem;
+}
+
+.timeline-desc {
+	font-size: 1.2rem;
+	line-height: 1.2;
+	padding-left: 0.5rem;
+}
+
+.timeline-item:nth-child(even) {
+	border-left: 3px dashed #1488CC;
+	border-top-left-radius: 2rem;
+	border-bottom-left-radius: 2rem;
+	margin-right: 2rem;
+	padding-right: 0;
+}
+
+.timeline-item:nth-child(odd) {
+	border-right: 3px dashed #1488CC;
+	border-top-right-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+	margin-left: 2rem;
+	padding-left: 0;
+}
+
+.timeline-item:first-child {
+	border-top: 0;
+	border-top-right-radius: 0;
+}
+
+.timeline-item:last-child {
+	border-bottom-left-radius: 0;
+}
+
+.number {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	margin-bottom: 0;
+	background: #1488CC;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	border: 2px solid #2B32B2;
+	display: grid;
+	place-items: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+.timeline-item:nth-child(even) .number {
+	left: 0;
+}
+
+.timeline-item:nth-child(odd) .number {
+	right: 0;
+	-webkit-transform: translate(50%, -50%);
+	transform: translate(50%, -50%);
+}
+
+.timeline-center {
+	width: 80vw;
+	max-width: 40rem;
+}
+
+.section {
+	padding: 3rem 0;
+}
+
+.section-title {
+	margin-bottom: 3rem;
+	text-align: center;
+	font-size: 2rem;
+	color: #2B32B2;
+}
+
+.section-center {
+	width: 50vw;
+	margin: 0 auto;
+	max-width: 1170px;
+	/* Smooth responsive */
+	-moz-transition: all 0.8s ease-in-out;
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
+@media screen and (max-width: 750px) {
+	.section-center {
+		width: 80vw;
+	}
 }

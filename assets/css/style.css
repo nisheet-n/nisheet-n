@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
 @import url(https://fonts.googleapis.com/css?family=Rubik);
+* {
+	-moz-transition: all 0.8s ease-in-out;
+	-webkit-transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+
 html {
 	line-height: 1;
 	-ms-text-size-adjust: 100%;
@@ -29,6 +37,12 @@ body {
 	transform: translate(-50%, -50%)
 }
 
+@media screen and (max-width: 750px) {
+	.header {
+		font-size: 3vw;
+	}
+}
+
 .header .site-title {
 	display: block;
 	line-height: 2;
@@ -39,10 +53,23 @@ body {
 	animation: blink 4s infinite alternate;
 }
 
+@media screen and (max-width: 750px) {
+	.header .site-title {
+		font-size: 10vw;
+	}
+}
+
 .header-icons {
 	display: flex;
 	justify-content: center;
-	text-align: center
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+	.header-icons {
+		display: flex;
+	}
 }
 
 .header-icons .icon {
@@ -53,13 +80,22 @@ body {
 	transition: all .8s;
 	width: 25px;
 	font-size: 25px;
-	margin: 2px;
+	margin-top: 1rem;
 	background: #1488CC;
 	color: #000;
 }
 
+@media screen and (max-width: 750px) {
+	.header-icons .icon {
+		height: 20px;
+		width: 20px;
+		font-size: 20px;
+	}
+}
+
 .header-icons .icon-link {
-	margin: 15px;
+	margin: 1rem;
+	text-decoration: none;
 }
 
 .header-icons .icon:active, .header-icons .icon:hover {
@@ -183,12 +219,6 @@ body {
 	width: 50vw;
 	margin: 0 auto;
 	max-width: 1170px;
-	/* Smooth responsive */
-	-moz-transition: all 0.8s ease-in-out;
-	-webkit-transition: all 0.8s ease-in-out;
-	-moz-transition: all 0.8s ease-in-out;
-	-o-transition: all 0.8s ease-in-out;
-	transition: all 0.8s ease-in-out;
 }
 
 @media screen and (max-width: 750px) {

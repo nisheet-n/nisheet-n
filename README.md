@@ -1,6 +1,6 @@
 <h3 align="center">👋 Hieee there 😇</h3>
 
-<h1 align="center" style="color: red;">I am Nisheet</h1>
+<h1 align="center" style="color: red;">I am <a target="_blank" href="https://www.nisheet.net/">Nisheet</a></h1>
 <h5 align="center">💻 Computer Science student currently in 3rd year. 🧮</h5>
 <hr>
 
@@ -12,16 +12,17 @@
  - 🤍  Java <br>
  - 💜  TailWind <br>
  - 🤎  PHP <br>
- - ✨  Other Cool Stuff <br>
+ - ❄️  Other Cool Stuff <br>
 
-
-<h3>👯 Looking to collaborate on some basic projects 🤔</h3>
-
+<!-- <h3>👯 Looking to collaborate on some basic projects 🤔</h3> -->
 
 <h3>🙌 I like: 🎉</h3>
- - 🎨  Drawing <br>
+ - 🎨  Designing <br>
+ - 🖼️  UI/UX <br>
+ - 🖍️  Drawing <br>
  - 🎹  Instrumentals <br>
- - 🏸  Games <br>
+ - 🧚  Anime <br>
+ - 🎮  Games <br>
  - 😛  You! <br>
 
 
@@ -36,4 +37,4 @@
 
 <br>
 
-<h5 align="center">💤😴</h5>
+<h4 align="center">~<a target="_blank" href="https://www.nisheet.net/">nisheet</a>~</h4>

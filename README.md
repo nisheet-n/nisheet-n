@@ -28,9 +28,11 @@
 
 
 <h3>📊 My GitHub Stats: 👨‍💻</h3>
-<img src="https://github-readme-stats.vercel.app/api?username=nisheet-n&show_icons=true&theme=midnight-purple&hide_border=false&border_color=F4F4F4"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nisheet-n&langs_count=8&layout=compact&&theme=midnight-purple&hide_border=false&border_color=F4F4F4&hide=jupyter%20notebook"/>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=nisheet-n&theme=midnight-purple&hide_border=false&border_color=F4F4F4"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=nisheet-n&theme=algolia&date_format=M%20j%5B%2C%20Y%5D&background=0D1117&border=F4F4F4&stroke=F4F4F4&currStreakNum=4C71F1&sideNums=4C71F1&currStreakLabel=4C71F1&ring=AB24D4&fire=AB24D4&sideLabels=4C71F1"/>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nisheet-n&custom_title=Languages%20And%20Skills%20💫&card_width=445&langs_count=10&layout=compact&bg_color=0D1117&title_color=4C71F1&text_color=E5E5E5&hide_border=false&border_color=F4F4F4&border_radius=10&hide=jupyter%20notebook"/>
+
+<img src="https://github-readme-stats.vercel.app/api?username=nisheet-n&custom_title=Awesome%20Works%20🌟&show_icons=true&count_private=true&line_height=35&bg_color=0D1117&title_color=4C71F1&text_color=E5E5E5&hide_border=false&border_color=F4F4F4&border_radius=10"/>
 
 
 <h3>📫 How to reach me: 💬</h3>

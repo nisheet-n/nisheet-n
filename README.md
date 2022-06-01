@@ -1,5 +1,5 @@
 <h1 align="center">
- <img src="https://user-images.githubusercontent.com/73037598/168544266-67f76ea6-bbd1-47d7-81bf-1e836cda25bc.gif" width="30px"> Hieee there, I'm 
+ 👋 Hieee there, I'm 
  <a target="_blank" href="https://www.nisheet.net/">Nisheet</a> 😇
 </h1>
 

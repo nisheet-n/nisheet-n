@@ -1,6 +1,6 @@
 <h1 align="center">
  👋 Hieee there, I'm 
- <a target="_blank" href="https://www.nisheet.net/">Nisheet</a> 😇
+ <a target="_blank" href="https://www.nisheet.dev/">Nisheet</a> 😇
 </h1>
 
 <h3 align="center">Computer Science student currently in final year.</h3>
@@ -16,7 +16,7 @@
 - 🔭 Learning and working on 🌱:  **React and Django**
 - 🙌 Ask me about 💻:  **Web Develpoment** 
 - ❄️ Other Cool Stuff 🖼️:  **Designing and UI/UX**
-- 👯 Looking for 💼:  **Intern Opportunities**
+- 👯 Looking for 💼:  **Upskilling**
 - 🧚 I like ❤:  **Anime and Music**
 - 🎹 More Hobbies 🖍️:  **Instruments and Painting**
 - 🎂 Fun fact 🎈:  **Wish me in August**
@@ -92,7 +92,7 @@
  <b>🔃 LinkedIn: </b> https://www.linkedin.com/in/nisheet2000/ <br>
  <b>💌 Mail: </b> nisheet2000@gmail.com <br>
  <b>🤖 GitHub: </b> https://github.com/nisheet-n/ <br>
- <b>🌐 Website: </b> <a target="_blank" href="https://www.nisheet.net/">nisheet.net</a> <br>
+ <b>🌐 Website: </b> <a target="_blank" href="https://www.nisheet.dev/">nisheet.dev</a> <br>
 </div>
 
 <div>
@@ -105,4 +105,4 @@
 
 <br/><br/><br/>
 
-<h4 align="center">~<a target="_blank" href="https://www.nisheet.net/">nisheet</a>~</h4>
+<h4 align="center">~<a target="_blank" href="https://www.nisheet.dev/">nisheet</a>~</h4>

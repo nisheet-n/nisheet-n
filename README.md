@@ -3,8 +3,7 @@
  <a target="_blank" href="https://www.nisheet.dev/">Nisheet</a> 😇
 </h1>
 
-<h3 align="center">Computer Science student currently in final year.</h3>
-<h5 align="center">Bachelor in Engineering, Computer Science (To be graduated in 2023)</h5>
+<h3 align="center">Bachelor in Engineering, Computer Science</h3>
 
 <br/>
 <p align="center"> <img src=https://komarev.com/ghpvc/?username=nisheet-n&color=blueviolet&style=for-the-badge alt=nisheet-n/></p>
@@ -13,7 +12,7 @@
 <img width="50%" align="right" alt="GitHub-Header" 
      src="https://user-images.githubusercontent.com/73037598/168544638-66112c88-737c-4160-aebd-5f82532e3580.svg" />
 
-- 🔭 Learning and working on 🌱:  **React and Django**
+- 🔭 Learning and working on 🌱:  **NextJS and React**
 - 🙌 Ask me about 💻:  **Web Develpoment** 
 - ❄️ Other Cool Stuff 🖼️:  **Designing and UI/UX**
 - 👯 Looking for 💼:  **Upskilling**
@@ -90,9 +89,9 @@
 <div align="center">
  <h3>📫 How to reach me: 💬</h3>
  <b>🔃 LinkedIn: </b> https://www.linkedin.com/in/nisheet2000/ <br>
- <b>💌 Mail: </b> nisheet2000@gmail.com <br>
+ <b>💌 Mail: </b> nisheet.dev@gmail.com <br>
  <b>🤖 GitHub: </b> https://github.com/nisheet-n/ <br>
- <b>🌐 Website: </b> <a target="_blank" href="https://www.nisheet.dev/">nisheet.dev</a> <br>
+ <b>🌐 Website: </b> <a target="_blank" href="https://www.nisheet.xyz/">nisheet.xyz</a> <br>
 </div>
 
 <div>
@@ -105,4 +104,4 @@
 
 <br/><br/><br/>
 
-<h4 align="center">~<a target="_blank" href="https://www.nisheet.dev/">nisheet</a>~</h4>
+<h4 align="center">~<a target="_blank" href="https://www.nisheet.xyz/">nisheet</a>~</h4>

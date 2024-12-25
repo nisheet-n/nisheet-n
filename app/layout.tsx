@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Architects_Daughter, Comic_Neue, Indie_Flower, Rubik_Doodle_Shadow } from "next/font/google";
+import { Comic_Neue, Rubik_Doodle_Shadow } from "next/font/google";
 import "./globals.css";
 
 const rubicDoodle = Rubik_Doodle_Shadow({

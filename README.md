@@ -1,6 +1,6 @@
 <h1 align="center">
  👋 Hieee there, I'm 
- <a target="_blank" href="https://www.nisheet.dev/">Nisheet</a> 😇
+ <a target="_blank" href="https://www.nisheet.xyz/">Nisheet</a> 😇
 </h1>
 
 <h3 align="center">Bachelor in Engineering, Computer Science</h3>

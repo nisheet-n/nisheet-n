@@ -9,8 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'text': 'var(--color-text)',
+        'background': 'var(--color-background)',
+      },
+      fontFamily: {
+        comicNue: ['var(--font-comic-neue)'],
+        rubicDoodle: ['var(--font-rubic-doodle-shadow)'],
       },
     },
   },

@@ -13,7 +13,7 @@
      src="https://user-images.githubusercontent.com/73037598/168544638-66112c88-737c-4160-aebd-5f82532e3580.svg" />
 
 - 🔭 Learning and working on 🌱:  **NextJS and React**
-- 🙌 Ask me about 💻:  **Web Develpoment** 
+- 🙌 Ask me about 💻:  **Web Develpoment and Data Analytics** 
 - ❄️ Other Cool Stuff 🖼️:  **Designing and UI/UX**
 - 👯 Looking for 💼:  **Upskilling**
 - 🧚 I like ❤:  **Anime and Music**

@@ -1,4 +1,4 @@
-import { Code2, ExternalLink, Github, Play, Star } from "lucide-react";
+import { Code2, ExternalLink, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,6 @@ interface Project {
   longDescription: string;
   technologies: string[];
   highlights: string[];
-  featured?: boolean;
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -26,7 +25,6 @@ const projects: Project[] = [
       "Real-time search with debouncing",
       "Continuous deployment with Vercel",
     ],
-    featured: true,
     githubUrl: "https://github.com/nisheet-n",
   },
   {
@@ -40,7 +38,6 @@ const projects: Project[] = [
       "Visualized medal counts, athlete performance, and country statistics",
       "Real-time data refresh with optimized query performance",
     ],
-    featured: true,
   },
   {
     title: "Password Generator",
@@ -59,7 +56,7 @@ const projects: Project[] = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16 md:py-24 bg-muted/30 relative" data-testid="section-projects">
+    <section id="projects" className="py-16 md:py-20 bg-muted/30 relative" data-testid="section-projects">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <svg className="absolute top-10 right-20 w-40 h-40 text-primary/5" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="50" cy="50" r="45" />
@@ -72,49 +69,32 @@ export function Projects() {
       </div>
       
       <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex items-center gap-3 mb-8">
           <Code2 className="h-6 w-6 text-primary" />
           <h2 className="text-3xl md:text-4xl font-semibold">Featured Projects</h2>
         </div>
-        <p className="text-muted-foreground mb-12 max-w-2xl">
-          Showcasing my ability to build production-quality applications.
-        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="overflow-visible hover-elevate"
+              className="overflow-visible hover-elevate border-border/50 dark:border-border"
               data-testid={`project-card-${index}`}
             >
               <CardContent className="p-6">
                 <div className="mb-4">
                   <div className="flex items-start justify-between gap-4 mb-2">
-                    <div className="flex items-center gap-2">
-                      {project.featured && (
-                        <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                      )}
-                      <div>
+                    <div>
                         <h3 className="text-xl font-semibold">{project.title}</h3>
                         <p className="text-sm text-muted-foreground">{project.description}</p>
                       </div>
-                    </div>
-                    <div className="flex gap-1 shrink-0">
-                      {project.liveUrl && (
-                        <Button variant="ghost" size="icon" asChild data-testid={`button-live-${index}`}>
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label="Live demo">
-                            <Play className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      )}
-                      {project.githubUrl && (
-                        <Button variant="ghost" size="icon" asChild data-testid={`button-github-${index}`}>
-                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <Github className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      )}
-                    </div>
+                    {project.githubUrl && (
+                      <Button variant="ghost" size="icon" asChild data-testid={`button-github-${index}`}>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                          <Github className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">{project.longDescription}</p>
                 </div>

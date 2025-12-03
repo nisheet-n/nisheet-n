@@ -1,8 +1,8 @@
 import { Mail, Github, Linkedin, ArrowDown, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profileImage from "@assets/1693741862728_1764435818153.jpg";
-import codeGraffiti from "@assets/generated_images/anime_code_graffiti_art.png";
-import resumePdf from "@assets/Nisheet_Resume.pdf";
+import profileImage from "../../../../assets/1693741862728_1764435818153.jpg";
+import codeGraffiti from "../../../../assets/generated_images/anime_code_graffiti_art.png";
+import resumePdf from "../../../../assets/Nisheet_Resume.pdf";
 
 const socialLinks = [
   { icon: Mail, href: "mailto:nisheet.dev@gmail.com", label: "Email" },
@@ -12,13 +12,6 @@ const socialLinks = [
 ];
 
 export function Hero() {
-  const scrollToExperience = () => {
-    const element = document.querySelector("#experience");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       id="about"
@@ -67,7 +60,7 @@ export function Hero() {
             </p>
 
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-6">
-              <Button size="lg" onClick={scrollToExperience} data-testid="button-view-work">
+              <Button size="lg" onClick={() => document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" })} data-testid="button-view-work">
                 View Experience
               </Button>
               <Button variant="outline" size="lg" asChild>

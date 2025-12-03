@@ -314,3 +314,36 @@
     inset: -1px;
   }
 }
+
+/* Testimonial Carousel - Center focused with peek */
+.testimonial-carousel {
+  --slide-width: 88%;
+  --gap: 16px;
+  --peek: calc((100% - var(--slide-width)) / 2);
+}
+
+@media (min-width: 640px) {
+  .testimonial-carousel {
+    --slide-width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial-carousel {
+    --slide-width: 65%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial-carousel {
+    --slide-width: 55%;
+  }
+}
+
+.testimonial-slide {
+  width: var(--slide-width);
+}
+
+.testimonial-carousel .flex[style] {
+  transform: translateX(calc(var(--peek) - var(--slide-index, 0) * (var(--slide-width) + var(--gap))));
+}

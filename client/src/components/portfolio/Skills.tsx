@@ -1,5 +1,4 @@
-import { Wrench, Code, Palette, Settings, BarChart3, type LucideIcon } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Wrench, Code, Palette, Settings, BarChart3, Database, type LucideIcon } from "lucide-react";
 import { 
   SiPython, 
   SiTypescript, 
@@ -20,68 +19,86 @@ import type { ComponentType } from "react";
 interface SkillCategory {
   title: string;
   icon: LucideIcon;
-  skills: { name: string; icon?: IconType | LucideIcon | ComponentType<{ className?: string }> }[];
+  color: string;
+  bgColor: string;
+  borderColor: string;
+  skills: { name: string; icon?: IconType | LucideIcon | ComponentType<{ className?: string }>; featured?: boolean }[];
 }
 
 const skillCategories: SkillCategory[] = [
   {
+    title: "Data & Analytics",
+    icon: BarChart3,
+    color: "text-blue-500",
+    bgColor: "bg-blue-500/10",
+    borderColor: "border-blue-500/20",
+    skills: [
+      { name: "PySpark", icon: SiApachespark, featured: true },
+      { name: "Databricks", icon: SiDatabricks, featured: true },
+      { name: "Alteryx" },
+      { name: "MS Excel" },
+      { name: "Tableau", icon: SiTableau },
+      { name: "PowerBI" },
+    ],
+  },
+  {
     title: "Languages",
     icon: Code,
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-500/10",
+    borderColor: "border-emerald-500/20",
     skills: [
-      { name: "Python", icon: SiPython },
-      { name: "SQL" },
+      { name: "Python", icon: SiPython, featured: true },
+      { name: "SQL", icon: Database, featured: true },
       { name: "TypeScript", icon: SiTypescript },
     ],
   },
   {
     title: "Web Development",
     icon: Code,
+    color: "text-violet-500",
+    bgColor: "bg-violet-500/10",
+    borderColor: "border-violet-500/20",
     skills: [
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "React.js", icon: SiReact },
+      { name: "React.js", icon: SiReact, featured: true },
+      { name: "Next.js", icon: SiNextdotjs, featured: true },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "Django", icon: SiDjango },
       { name: "REST APIs" },
-    ],
-  },
-  {
-    title: "Data & Analytics",
-    icon: BarChart3,
-    skills: [
-      { name: "PySpark", icon: SiApachespark },
-      { name: "Databricks", icon: SiDatabricks },
-      { name: "Tableau", icon: SiTableau },
-      { name: "MS Excel" },
-      { name: "PowerBI" },
-      { name: "Alteryx" },
-    ],
-  },
-  {
-    title: "Design",
-    icon: Palette,
-    skills: [
-      { name: "Figma", icon: SiFigma },
-      { name: "Adobe XD" },
-      { name: "Responsive Design" },
-      { name: "UI/UX" },
+      { name: "Django", icon: SiDjango },
     ],
   },
   {
     title: "Tools",
     icon: Settings,
+    color: "text-amber-500",
+    bgColor: "bg-amber-500/10",
+    borderColor: "border-amber-500/20",
     skills: [
-      { name: "Git", icon: SiGit },
+      { name: "Git", icon: SiGit, featured: true },
       { name: "GitHub", icon: SiGithub },
       { name: "VS Code" },
       { name: "Cursor" },
       { name: "Co-Pilot" },
     ],
   },
+  {
+    title: "Design",
+    icon: Palette,
+    color: "text-pink-500",
+    bgColor: "bg-pink-500/10",
+    borderColor: "border-pink-500/20",
+    skills: [
+      { name: "Figma", icon: SiFigma, featured: true },
+      { name: "Adobe XD" },
+      { name: "UI/UX" },
+      { name: "Responsive Design" },
+    ],
+  },
 ];
 
 export function Skills() {
   return (
-    <section id="skills" className="py-16 md:py-24 relative" data-testid="section-skills">
+    <section id="skills" className="py-16 md:py-20 relative" data-testid="section-skills">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <svg className="absolute top-10 right-10 w-32 h-32 text-primary/5 hidden md:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="10" y="10" width="80" height="80" rx="10" />
@@ -94,32 +111,47 @@ export function Skills() {
       </div>
       
       <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
-        <div className="flex items-center gap-3 mb-12">
+        <div className="flex items-center gap-3 mb-8">
           <Wrench className="h-6 w-6 text-primary" />
           <h2 className="text-3xl md:text-4xl font-semibold">Skills</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="overflow-visible hover-elevate" data-testid={`skill-category-${index}`}>
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <category.icon className="h-5 w-5 text-primary" />
-                  <h3 className="font-semibold">{category.title}</h3>
+            <div 
+              key={index} 
+              className={`group relative rounded-xl border ${category.borderColor} dark:border-border bg-card p-6 transition-all duration-300 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/20`}
+              data-testid={`skill-category-${index}`}
+            >
+              <div className={`absolute top-0 right-0 w-32 h-32 ${category.bgColor} rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 transition-opacity duration-300 group-hover:opacity-80`} />
+              
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className={`p-2.5 rounded-lg ${category.bgColor}`}>
+                    <category.icon className={`h-5 w-5 ${category.color}`} />
+                  </div>
+                  <h3 className="font-semibold text-lg">{category.title}</h3>
                 </div>
+                
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-muted text-sm"
+                      className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 ${
+                        skill.featured 
+                          ? `${category.bgColor} ${category.borderColor} border` 
+                          : 'bg-muted/50 hover:bg-muted'
+                      }`}
                     >
-                      {skill.icon && <skill.icon className="h-3.5 w-3.5 text-muted-foreground" />}
-                      <span>{skill.name}</span>
+                      {skill.icon && (
+                        <skill.icon className={`h-4 w-4 ${skill.featured ? category.color : 'text-muted-foreground'}`} />
+                      )}
+                      <span className={`text-sm ${skill.featured ? 'font-medium' : ''}`}>{skill.name}</span>
                     </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

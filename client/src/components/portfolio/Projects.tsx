@@ -1,8 +1,10 @@
-import { CodeBracketSquareIcon, CheckIcon } from "@heroicons/react/24/outline";
+import { CodeBracketSquareIcon, CheckIcon, ArrowTopRightOnSquareIcon, GlobeAsiaAustraliaIcon } from "@heroicons/react/24/outline";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { GitHubIcon } from "@/components/BrandIcons";
+
+const logsFile = new URL("../../../../assets/Paris_Olympic_Data_Preparation.html", import.meta.url).href;
 
 interface Project {
   title: string;
@@ -12,13 +14,14 @@ interface Project {
   highlights: string[];
   liveUrl?: string;
   githubUrl?: string;
+  logsUrl?: string;
 }
 
 const projects: Project[] = [
   {
     title: "GrandLine",
     description: "Anime Streaming Platform",
-    longDescription: "A production-ready streaming platform showcasing advanced React patterns, server-side rendering, and real-time features.",
+    longDescription: "An anime streaming platform showcasing advanced React patterns, server-side rendering, and real-time features.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React.js", "Swiper.js", "HLS.js"],
     highlights: [
       "Server Components with Next.js App Router",
@@ -27,6 +30,7 @@ const projects: Project[] = [
       "Continuous deployment with Vercel",
     ],
     githubUrl: "https://github.com/nisheet-n",
+    liveUrl: "https://1anime.app/",
   },
   {
     title: "Paris Olympics 2024 Dashboard",
@@ -39,6 +43,8 @@ const projects: Project[] = [
       "Visualized medal counts, athlete performance, and country statistics",
       "Real-time data refresh with optimized query performance",
     ],
+    liveUrl: "https://public.tableau.com/views/ParisOlympic2024-WinningForAnotherFlag/Overview",
+    logsUrl: logsFile,
   },
   {
     title: "Password Generator",
@@ -51,7 +57,7 @@ const projects: Project[] = [
       "Clipboard integration with fallback",
       "Responsive and accessible design",
     ],
-    githubUrl: "https://github.com/nisheet-n",
+    githubUrl: "https://github.com/nisheet-n/secure-pass-gen",
   },
 ];
 
@@ -89,13 +95,30 @@ export function Projects() {
                         <h3 className="text-xl font-semibold">{project.title}</h3>
                         <p className="text-sm text-muted-foreground">{project.description}</p>
                       </div>
-                    {project.githubUrl && (
-                      <Button variant="ghost" size="icon" asChild data-testid={`button-github-${index}`}>
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                          <GitHubIcon className="h-4 w-4" />
-                        </a>
-                      </Button>
-                    )}
+                    <div className="flex items-center gap-2">
+                      {project.githubUrl && (
+                        <Button variant="ghost" size="icon" asChild data-testid={`button-github-${index}`}>
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <GitHubIcon className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
+
+                      {project.liveUrl && (
+                        <Button variant="ghost" size="icon" asChild data-testid={`button-live-${index}`}>
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label="Live demo">
+                            <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
+                      {project.logsUrl && (
+                        <Button variant="ghost" size="icon" asChild data-testid={`button-logs-${index}`}>
+                          <a href={project.logsUrl} target="_blank" rel="noopener noreferrer" aria-label="Project Logs">
+                            <GlobeAsiaAustraliaIcon className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
+                    </div>
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">{project.longDescription}</p>
                 </div>

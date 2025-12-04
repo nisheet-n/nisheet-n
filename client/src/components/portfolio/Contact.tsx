@@ -1,12 +1,13 @@
-import { Mail, Github, Linkedin, FileText } from "lucide-react";
+import { EnvelopeIcon, DocumentTextIcon } from "@heroicons/react/24/solid";
 import { Button } from "@/components/ui/button";
+import { GitHubIcon, LinkedInIcon } from "@/components/BrandIcons";
 import resumePdf from "../../../../assets/Nisheet_Resume.pdf";
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com/nisheet-n" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/nisheet2000" },
-  { icon: Mail, label: "Email", href: "mailto:nisheet.dev@gmail.com" },
-  { icon: FileText, label: "Resume", href: resumePdf },
+  { icon: GitHubIcon, label: "GitHub", href: "https://github.com/nisheet-n" },
+  { icon: LinkedInIcon, label: "LinkedIn", href: "https://linkedin.com/in/nisheet2000" },
+  { icon: EnvelopeIcon, label: "Email", href: "mailto:nisheet.dev@gmail.com" },
+  { icon: DocumentTextIcon, label: "Resume", href: resumePdf },
 ];
 
 export function Contact() {
@@ -14,7 +15,7 @@ export function Contact() {
     <section id="contact" className="py-12 md:py-16 bg-muted/30" data-testid="section-contact">
       <div className="max-w-6xl mx-auto px-4 md:px-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-6">
-          <Mail className="h-6 w-6 text-primary" />
+          <EnvelopeIcon className="h-6 w-6 text-primary" />
           <h2 className="text-3xl md:text-4xl font-semibold">Contact</h2>
         </div>
 

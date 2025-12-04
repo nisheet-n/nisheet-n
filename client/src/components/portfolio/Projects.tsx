@@ -1,7 +1,8 @@
-import { Code2, ExternalLink, Github } from "lucide-react";
+import { CodeBracketSquareIcon, CheckIcon } from "@heroicons/react/24/outline";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { GitHubIcon } from "@/components/BrandIcons";
 
 interface Project {
   title: string;
@@ -70,8 +71,8 @@ export function Projects() {
       
       <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
         <div className="flex items-center gap-3 mb-8">
-          <Code2 className="h-6 w-6 text-primary" />
-          <h2 className="text-3xl md:text-4xl font-semibold">Featured Projects</h2>
+          <CodeBracketSquareIcon className="h-6 w-6 text-primary" />
+          <h2 className="text-3xl md:text-4xl font-semibold">Projects</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -91,7 +92,7 @@ export function Projects() {
                     {project.githubUrl && (
                       <Button variant="ghost" size="icon" asChild data-testid={`button-github-${index}`}>
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                          <Github className="h-4 w-4" />
+                          <GitHubIcon className="h-4 w-4" />
                         </a>
                       </Button>
                     )}
@@ -102,7 +103,7 @@ export function Projects() {
                 <ul className="space-y-1.5 mb-4">
                   {project.highlights.map((highlight, i) => (
                     <li key={i} className="text-sm text-muted-foreground flex gap-2">
-                      <ExternalLink className="h-3 w-3 mt-1 text-primary shrink-0" />
+                      <CheckIcon className="h-3 w-3 mt-1 text-primary shrink-0" />
                       <span>{highlight}</span>
                     </li>
                   ))}

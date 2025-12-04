@@ -1,6 +1,7 @@
-import { Briefcase, Calendar, TrendingUp, Quote, Linkedin } from "lucide-react";
+import { BriefcaseIcon, CalendarIcon, ArrowTrendingUpIcon, ChatBubbleLeftIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { LinkedInIcon } from "@/components/BrandIcons";
 import { useState, useEffect } from "react";
 
 interface ExperienceItem {
@@ -8,6 +9,7 @@ interface ExperienceItem {
   role: string;
   previousRole?: string;
   duration: string;
+  location: string;
   type: "full-time" | "intern";
   impact: string;
   achievements: string[];
@@ -27,35 +29,42 @@ const experiences: ExperienceItem[] = [
   {
     company: "Deloitte US-India",
     role: "Senior Assistant Analytics Specialist",
-    previousRole: "Analytics Specialist",
-    duration: "Aug 2023 – Present",
+    duration: "May 2025 – Present",
+    location: "Hyderabad, India",
     type: "full-time",
     impact: "Promoted within 2 years",
     achievements: [
       "Built data processing pipelines using Python and PySpark, handling 10+ Billion records combined over 50+ clients",
-      "Improved code maintainability by implementing modern Python practices demonstrating strong Python fundamentals",
-      "Collaborated with cross-functional teams to translate business requirements into technical solutions",
-      "Received shoutout for exceptional performance during first year",
+      "Delivered audit readiness via journal entry testing and 1M+ financial record reconciliation",
+      "Automated reconciliations, FX revaluations & audit checks via Python/SQL with full coverage",
+      "Created 10+ Tableau/Power BI dashboards, enabling real-time data-driven decisions for audit teams",
+      "Flagged financial anomalies through trend analysis using PowerBI to support fraud analytics",
+      "Received Spot Award for simplifying complex data into clear, actionable insights",
     ],
-    technologies: ["Python", "PySpark", "SQL", "Databricks", "MS Excel", "Tableau", "Alteryx"],
+    technologies: ["Python", "PySpark", "SQL", "Databricks", "Power BI", "MS Excel", "Tableau", "Alteryx"],
     color: "green",
   },
   {
     company: "Deloitte US-India",
-    role: "Winter Intern",
-    duration: "Jan 2023 – Mar 2023",
-    type: "intern",
-    impact: "Converted to full-time offer",
+    role: "Analytics Specialist",
+    duration: "Jan 2023 – May 2025",
+    location: "Hyderabad, India",
+    type: "full-time",
+    impact: "Converted from intern to full-time",
     achievements: [
       "Modernized legacy codebase achieving 50% reduction in runtime through clean code principles and Python optimizations",
+      "Built scalable SQL/PySpark pipelines to clean and process 100M+ records for reporting",
+      "Validated data completeness using SAS & Python, ensuring financial audit accuracy",
+      "Collaborated with cross-functional teams to translate business requirements into technical solutions",
     ],
-    technologies: ["Python", "Data Processing", "Code Optimization"],
+    technologies: ["Python", "PySpark", "SQL", "SAS", "Databricks", "MS Excel"],
     color: "green",
   },
   {
     company: "HighRadius Corporation",
     role: "Frontend Developer",
     duration: "Jan 2022 – Nov 2022",
+    location: "Bhubaneswar, India",
     type: "full-time",
     impact: "Reduced development time by 40%",
     achievements: [
@@ -218,7 +227,7 @@ export function Experience() {
       
       <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
         <div className="flex items-center gap-3 mb-8">
-          <Briefcase className="h-6 w-6 text-primary" />
+          <BriefcaseIcon className="h-6 w-6 text-primary" />
           <h2 className="text-3xl md:text-4xl font-semibold">Experience</h2>
         </div>
 
@@ -247,14 +256,20 @@ export function Experience() {
                           )}
                           <p className={`font-medium ${exp.color === "green" ? "text-green-600 dark:text-green-400" : "text-orange-600 dark:text-orange-400"}`}>{exp.company}</p>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Calendar className="h-4 w-4" />
-                          <span>{exp.duration}</span>
+                        <div className="text-right">
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <CalendarIcon className="h-4 w-4" />
+                            <span>{exp.duration}</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
+                            <MapPinIcon className="h-4 w-4" />
+                            <span>{exp.location}</span>
+                          </div>
                         </div>
                       </div>
 
                       <div className="flex items-center gap-2 mb-4 text-sm">
-                        <TrendingUp className="h-4 w-4 text-primary" />
+                        <ArrowTrendingUpIcon className="h-4 w-4 text-primary" />
                         <span className="font-medium text-foreground">{exp.impact}</span>
                       </div>
 
@@ -307,7 +322,7 @@ export function Experience() {
                   }`}>
                     <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 dark:bg-primary/20 rounded-full -translate-y-1/2 translate-x-1/2" />
                     <div className="absolute bottom-0 left-0 w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-full translate-y-1/2 -translate-x-1/2" />
-                    <Quote className="absolute bottom-4 right-4 h-12 w-12 text-primary/15 dark:text-primary/30" />
+                    <ChatBubbleLeftIcon className="absolute bottom-4 right-4 h-12 w-12 text-primary/15 dark:text-primary/30" />
                     
                     <div className="relative z-10">
                       <div className="flex items-center justify-between gap-4 mb-4">
@@ -327,7 +342,7 @@ export function Experience() {
                           className="flex items-center justify-center w-8 h-8 rounded-full bg-[#0A66C2]/10 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition-colors"
                           data-testid={`linkedin-${shoutout.from.split(' ')[0].toLowerCase()}`}
                         >
-                          <Linkedin className="w-4 h-4" />
+                          <LinkedInIcon className="w-4 h-4" />
                         </a>
                       </div>
                       

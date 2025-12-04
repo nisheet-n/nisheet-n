@@ -1,14 +1,16 @@
-import { Mail, Github, Linkedin, ArrowDown, FileText } from "lucide-react";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon, DocumentTextIcon } from "@heroicons/react/24/solid";
 import { Button } from "@/components/ui/button";
+import { GitHubIcon, LinkedInIcon } from "@/components/BrandIcons";
 import profileImage from "../../../../assets/1693741862728_1764435818153.jpg";
 import codeGraffiti from "../../../../assets/generated_images/anime_code_graffiti_art.png";
 import resumePdf from "../../../../assets/Nisheet_Resume.pdf";
 
 const socialLinks = [
-  { icon: Mail, href: "mailto:nisheet.dev@gmail.com", label: "Email" },
-  { icon: Github, href: "https://github.com/nisheet-n", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/nisheet2000", label: "LinkedIn" },
-  { icon: FileText, href: resumePdf, label: "Resume" },
+  { icon: EnvelopeIcon, href: "mailto:nisheet.dev@gmail.com", label: "Email", isBrand: false },
+  { icon: GitHubIcon, href: "https://github.com/nisheet-n", label: "GitHub", isBrand: true },
+  { icon: LinkedInIcon, href: "https://linkedin.com/in/nisheet2000", label: "LinkedIn", isBrand: true },
+  { icon: DocumentTextIcon, href: resumePdf, label: "Resume", isBrand: false },
 ];
 
 export function Hero() {
@@ -42,9 +44,6 @@ export function Hero() {
                 className="w-full h-full object-cover"
                 data-testid="img-avatar"
               />
-            </div>
-            <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xl animate-bounce">
-              <span className="font-bold">N</span>
             </div>
           </div>
 
@@ -103,7 +102,7 @@ export function Hero() {
         aria-label="Scroll down"
         data-testid="button-scroll-down"
       >
-        <ArrowDown className="h-6 w-6" />
+        <ArrowDownIcon className="h-6 w-6" />
       </button>
     </section>
   );

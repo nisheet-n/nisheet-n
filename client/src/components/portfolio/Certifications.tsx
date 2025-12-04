@@ -1,11 +1,14 @@
-import { Award, ExternalLink } from "lucide-react";
+import { AcademicCapIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { Card, CardContent } from "@/components/ui/card";
-import { SiDatabricks, SiUdemy, SiAlteryx, SiLeetcode } from "react-icons/si";
+import { DatabricksIcon, UdemyIcon, AlteryxIcon, LeetCodeIcon } from "@/components/BrandIcons";
+import type { ComponentType } from "react";
+
+type IconComponent = ComponentType<{ className?: string }>;
 
 interface CertificationItem {
   title: string;
   issuer: string;
-  icon: typeof SiDatabricks;
+  icon: IconComponent;
   iconColor: string;
   credentialUrl?: string;
   year?: string;
@@ -15,35 +18,35 @@ const certifications: CertificationItem[] = [
   {
     title: "Get Started with SQL Analytics and BI on Databricks",
     issuer: "Databricks",
-    icon: SiDatabricks,
+    icon: DatabricksIcon,
     iconColor: "text-[#FF3621]",
     credentialUrl: "https://drive.google.com/file/d/1K7-ddGDTpRxg1pwMGGx-93xmyP2CHj7a/view?usp=sharing",
   },
   {
     title: "Transform Data with Spark",
     issuer: "Databricks",
-    icon: SiDatabricks,
+    icon: DatabricksIcon,
     iconColor: "text-[#FF3621]",
     credentialUrl: "https://drive.google.com/file/d/1xB6qU2Xv3PnVUgeqXkBwkPLWhAB_EKuz/view?usp=sharing",
   },
   {
     title: "Top SQL 50 Badge",
     issuer: "LeetCode",
-    icon: SiLeetcode,
+    icon: LeetCodeIcon,
     iconColor: "text-[#FFA116]",
     credentialUrl: "https://leetcode.com/u/nisheet2000/",
   },
   {
     title: "Introduction to Alteryx",
     issuer: "Alteryx",
-    icon: SiAlteryx,
+    icon: AlteryxIcon,
     iconColor: "text-[#0078C0]",
     credentialUrl: "https://drive.google.com/file/d/1wgAyw-v0Md9FbOGoRK3dH7gT87tUV0xS/view?usp=sharing",
   },
   {
     title: "Complete Python Bootcamp",
     issuer: "Udemy",
-    icon: SiUdemy,
+    icon: UdemyIcon,
     iconColor: "text-[#A435F0]",
     credentialUrl: "",
   },
@@ -64,7 +67,7 @@ export function Certifications() {
 
       <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
         <div className="flex items-center gap-3 mb-8">
-          <Award className="h-6 w-6 text-primary" />
+          <AcademicCapIcon className="h-6 w-6 text-primary" />
           <h2 className="text-3xl md:text-4xl font-semibold">Certifications</h2>
         </div>
 
@@ -91,7 +94,7 @@ export function Certifications() {
                         aria-label="View Credential"
                         data-testid={`link-credential-${index}`}
                       >
-                        <ExternalLink className="h-4 w-4 text-muted-foreground" />
+                        <ArrowTopRightOnSquareIcon className="h-4 w-4 text-muted-foreground" />
                       </a>
                     </div>
                     <p className="text-muted-foreground text-sm mb-2">{cert.issuer}</p>

@@ -1,6 +1,9 @@
-import { GraduationCap, Award, Trophy, Users, Heart } from "lucide-react";
+import { AcademicCapIcon, TrophyIcon, UserGroupIcon, HeartIcon } from "@heroicons/react/24/outline";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import type { ComponentType } from "react";
+
+type IconComponent = ComponentType<{ className?: string }>;
 
 interface EducationItem {
   institution: string;
@@ -13,13 +16,13 @@ interface EducationItem {
 
 interface AwardItem {
   title: string;
-  icon: typeof Trophy;
+  icon: IconComponent;
   highlight?: boolean;
 }
 
 interface LeadershipItem {
   title: string;
-  icon: typeof Trophy;
+  icon: IconComponent;
   link?: string;
   linkText?: string;
   suffix?: string;
@@ -44,17 +47,17 @@ const education: EducationItem[] = [
 ];
 
 const awards: AwardItem[] = [
-  { title: "Awarded for handling large-scale data processing for a client having 1Billion+ records at Deloitte", icon: Trophy, highlight: true },
-  { title: "All India Eastern Zonal Finalist at Tata Crucible Hackathon for developing Parimargin, a geolocation-based track solution", icon: Trophy },
-  { title: "Earned Scholar's Memento and 4 Scholar badges for consistent academic excellence over 4+ years", icon: Award },
-  { title: "Secured first division in Fine Arts (Painting) at Pracheen Kala Kendra, as well as 2nd place in Art Competition", icon: Award },
+  { title: "Awarded for handling large-scale data processing for a client having 1Billion+ records at Deloitte", icon: TrophyIcon, highlight: true },
+  { title: "All India Eastern Zonal Finalist at Tata Crucible Hackathon for developing Parimargin, a geolocation-based track solution", icon: TrophyIcon },
+  { title: "Earned Scholar's Memento and 4 Scholar badges for consistent academic excellence over 4+ years", icon: TrophyIcon },
+  { title: "Secured first division in Fine Arts (Painting) at Pracheen Kala Kendra, as well as 2nd place in Art Competition", icon: TrophyIcon },
 ];
 
 const leadership: LeadershipItem[] = [
-  { title: "Mentored 2 interns at Deloitte, successfully guiding both to secure full-time positions", icon: Users },
-  { title: "UI/UX Lead at IoT Lab, KIIT University, successfully delivered 18 projects and prototypes", icon: Users },
-  { title: "Official website developer and logo designer for", icon: Heart, linkText: "Sankalp Sewa Ka", link: "https://www.sankalpsewaka.org/", suffix: " NGO" },
-  { title: "Coordinated educational drives at Rural Immersion Programme for village children, reaching a footfall of 500+", icon: Heart },
+  { title: "Mentored 2 interns at Deloitte, successfully guiding both to secure full-time positions", icon: UserGroupIcon },
+  { title: "UI/UX Lead at IoT Lab, KIIT University, successfully delivered 18 projects and prototypes", icon: UserGroupIcon },
+  { title: "Official website developer and logo designer for", icon: HeartIcon, linkText: "Sankalp Sewa Ka", link: "https://www.sankalpsewaka.org/", suffix: " NGO" },
+  { title: "Coordinated educational drives at Rural Immersion Programme for village children, reaching a footfall of 500+", icon: HeartIcon },
 ];
 
 export function Education() {
@@ -72,7 +75,7 @@ export function Education() {
       
       <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
         <div className="flex items-center gap-3 mb-8">
-          <GraduationCap className="h-6 w-6 text-primary" />
+          <AcademicCapIcon className="h-6 w-6 text-primary" />
           <h2 className="text-3xl md:text-4xl font-semibold">Education</h2>
         </div>
         
@@ -106,7 +109,7 @@ export function Education() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Users className="h-6 w-6 text-primary" />
+              <UserGroupIcon className="h-6 w-6 text-primary" />
               <h2 className="text-2xl font-semibold">Leadership</h2>
             </div>
             <div className="grid grid-cols-1 gap-3">
@@ -141,7 +144,7 @@ export function Education() {
 
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Trophy className="h-6 w-6 text-primary" />
+              <TrophyIcon className="h-6 w-6 text-primary" />
               <h2 className="text-2xl font-semibold">Recognition</h2>
             </div>
             <div className="space-y-3">

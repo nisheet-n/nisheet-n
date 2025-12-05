@@ -2,8 +2,8 @@ import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import { EnvelopeIcon, DocumentTextIcon } from "@heroicons/react/24/solid";
 import { Button } from "@/components/ui/button";
 import { GitHubIcon, LinkedInIcon } from "@/components/BrandIcons";
-import profileImage from "../../../../assets/1693741862728_1764435818153.jpg";
-import codeGraffiti from "../../../../assets/generated_images/anime_code_graffiti_art.png";
+import profileImage from "../../../../assets/images/ProfileImage.jpg";
+import codeGraffiti from "../../../../assets/images/anime_code_graffiti_art.png";
 import resumePdf from "../../../../assets/Nisheet_Resume.pdf";
 
 const socialLinks = [

@@ -27,37 +27,37 @@ interface ShoutoutItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: "Deloitte US-India",
-    role: "Senior Assistant Analytics Specialist",
-    duration: "May 2025 – Present",
+    company: "Deloitte",
+    role: "Senior Assistant Data Analyst",
+    duration: "Jun 2025 – Present",
     location: "Hyderabad, India",
     type: "full-time",
     impact: "Promoted within 2 years",
     achievements: [
-      "Built data processing pipelines using Python and PySpark, handling 10+ Billion records combined over 50+ clients",
-      "Delivered audit readiness via journal entry testing and 1M+ financial record reconciliation",
-      "Automated reconciliations, FX revaluations & audit checks via Python/SQL with full coverage",
-      "Created 10+ Tableau/Power BI dashboards, enabling real-time data-driven decisions for audit teams",
-      "Flagged financial anomalies through trend analysis using PowerBI to support fraud analytics",
-      "Received Spot Award for simplifying complex data into clear, actionable insights",
+      "Built scalable PySpark pipelines in Databricks to process 10B+ records for 50+ enterprise clients",
+      "Delivered audit readiness via journal entry testing and 1M+ financial record reconciliations",
+      "Automated FX revaluations and reconciliations using Python/SQL, saving 80+ manual hours",
+      "Created 15+ Tableau/Power BI dashboards to enable real-time fraud analytics and anomaly detection",
+      "Led 5+ clinical workstreams developing predictive models to optimize patient outcomes",
+      "Mentored 3 analysts and streamlined review cycles to improve delivery speed and accuracy",
     ],
-    technologies: ["Python", "PySpark", "SQL", "Databricks", "Power BI", "MS Excel", "Tableau", "Alteryx"],
+    technologies: ["PySpark", "Databricks", "SQL", "Python", "Power BI", "Tableau", "Alteryx"],
     color: "green",
   },
   {
-    company: "Deloitte US-India",
-    role: "Analytics Specialist",
+    company: "Deloitte",
+    role: "Data Analyst",
     duration: "Jan 2023 – May 2025",
     location: "Hyderabad, India",
     type: "full-time",
     impact: "Converted from intern to full-time",
     achievements: [
-      "Modernized legacy codebase achieving 50% reduction in runtime through clean code principles and Python optimizations",
+      "Migrated legacy SAS workflows to Spark-native Python achieving a 50% runtime reduction",
       "Built scalable SQL/PySpark pipelines to clean and process 100M+ records for reporting",
-      "Validated data completeness using SAS & Python, ensuring financial audit accuracy",
-      "Collaborated with cross-functional teams to translate business requirements into technical solutions",
+      "Implemented Python data quality checks to eliminate 99% of pre-submission formatting and null errors",
+      "Developed 10+ ESG dashboards and performed strategic EDA to surface sustainability insights",
     ],
-    technologies: ["Python", "PySpark", "SQL", "SAS", "Databricks", "MS Excel"],
+    technologies: ["SAS", "SQL", "Python", "Databricks", "MS Excel"],
     color: "green",
   },
   {
@@ -254,16 +254,28 @@ export function Experience() {
                           ) : (
                             <h3 className="text-xl font-semibold">{exp.role}</h3>
                           )}
-                          <p className={`font-medium ${exp.color === "green" ? "text-green-600 dark:text-green-400" : "text-orange-600 dark:text-orange-400"}`}>{exp.company}</p>
+
+                          <div className="flex items-center gap-3 mt-1">
+                            <p className={`font-medium ${exp.color === "green" ? "text-green-600 dark:text-green-400" : "text-orange-600 dark:text-orange-400"}`}>{exp.company}</p>
+                            <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                              <MapPinIcon className="h-4 w-4" />
+                              <span className="text-sm">{exp.location}</span>
+                            </div>
+                          </div>
                         </div>
-                        <div className="text-right">
+
+                        <div className="text-right flex flex-col items-end">
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <CalendarIcon className="h-4 w-4" />
                             <span>{exp.duration}</span>
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
-                            <MapPinIcon className="h-4 w-4" />
-                            <span>{exp.location}</span>
+
+                          <div className="mt-2 flex flex-wrap justify-end gap-2">
+                            {exp.technologies.map((tech) => (
+                              <Badge key={tech} variant="secondary" className="text-xs px-2 py-0.5">
+                                {tech}
+                              </Badge>
+                            ))}
                           </div>
                         </div>
                       </div>
@@ -280,15 +292,10 @@ export function Experience() {
                             <span>{achievement}</span>
                           </li>
                         ))}
+
                       </ul>
 
-                      <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech) => (
-                          <Badge key={tech} variant="secondary" className="font-mono text-xs">
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
+                      {/* Technologies are displayed in the right column; bottom list removed */}
                     </CardContent>
                   </Card>
                 </div>

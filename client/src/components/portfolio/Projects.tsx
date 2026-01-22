@@ -22,21 +22,21 @@ const projects: Project[] = [
     title: "GrandLine",
     description: "Anime Streaming Platform",
     longDescription: "An anime streaming platform showcasing advanced React patterns, server-side rendering, and real-time features.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React.js", "Swiper.js", "HLS.js"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React.js", "Swiper.js"],
     highlights: [
       "Server Components with Next.js App Router",
       "Custom HLS video player with adaptive streaming",
       "Real-time search with debouncing",
       "Continuous deployment with Vercel",
     ],
-    githubUrl: "https://github.com/nisheet-n",
-    liveUrl: "https://1anime.app/",
+    githubUrl: "https://github.com/nisheet-n/grandline",
+    liveUrl: "https://thegrandline.vercel.app/anime",
   },
   {
     title: "Paris Olympics 2024 Dashboard",
     description: "Data Analytics Dashboard",
     longDescription: "An interactive analytics dashboard visualizing Paris Olympics 2024 data with comprehensive insights on events, athletes, and medal standings.",
-    technologies: ["Databricks", "Tableau", "Python", "SQL", "Data Analytics"],
+    technologies: ["Databricks", "Tableau", "Python","PySpark", "SQL"],
     highlights: [
       "Built data pipelines in Databricks for ETL processing",
       "Created interactive Tableau dashboards with drill-down capabilities",
@@ -47,12 +47,24 @@ const projects: Project[] = [
     logsUrl: logsFile,
   },
   {
+    title: "Muso",
+    description: "Free Music Anywhere",
+    longDescription: "A lightweight music streaming web app with playlist support, offline caching, and a responsive player UI.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel", "YT Music"],
+    highlights: [
+      "Responsive music player with playlist management",
+      "Offline caching using Service Workers",
+      "Seamless playback with background audio controls",
+    ],
+    liveUrl: "https://playmuso.vercel.app/",
+    githubUrl: "https://github.com/nisheet-n/muso",
+  },
+  {
     title: "Password Generator",
     description: "Secure Password Web App",
     longDescription: "A security-focused web application demonstrating RESTful API design and modern frontend practices.",
     technologies: ["Django", "Python", "JavaScript", "REST APIs"],
     highlights: [
-      "RESTful API architecture with Django",
       "Customizable password generation",
       "Clipboard integration with fallback",
       "Responsive and accessible design",
@@ -132,13 +144,15 @@ export function Projects() {
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-2">
                   {project.technologies.map((tech) => (
                     <Badge key={tech} variant="secondary" className="font-mono text-xs">
                       {tech}
                     </Badge>
                   ))}
                 </div>
+
+                {/* Technologies are shown above the description */}
               </CardContent>
             </Card>
           ))}

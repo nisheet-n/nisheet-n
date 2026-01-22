@@ -29,7 +29,7 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Data & Analytics",
+    title: "Data & BI",
     icon: ChartBarIcon,
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
@@ -37,11 +37,10 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "PySpark", icon: SparkIcon, featured: true },
       { name: "Databricks", icon: DatabricksIcon, featured: true },
+      { name: "Tableau", icon: TableauIcon, featured: true },
+      { name: "Power BI" },
       { name: "Alteryx" },
-      { name: "SAS" },
       { name: "MS Excel" },
-      { name: "Tableau", icon: TableauIcon },
-      { name: "PowerBI" },
     ],
   },
   {
@@ -81,7 +80,19 @@ const skillCategories: SkillCategory[] = [
       { name: "GitHub", icon: GitHubIcon },
       { name: "VS Code" },
       { name: "Cursor" },
-      { name: "Co-Pilot" },
+      { name: "Vercel" },
+    ],
+  },
+  {
+    title: "Cloud & Platforms",
+    icon: WrenchScrewdriverIcon,
+    color: "text-sky-500",
+    bgColor: "bg-sky-500/10",
+    borderColor: "border-sky-500/20",
+    skills: [
+      { name: "Azure Databricks" },
+      { name: "AWS" },
+      { name: "Jira" },
     ],
   },
   {

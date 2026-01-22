@@ -55,7 +55,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed max-w-xl">
-              Data engineer at Deloitte processing 10+ billion records for enterprise clients. Former frontend developer with expertise in React and Next.js. B.Tech in Computer Science with 9.16 CGPA.
+              Data Analyst with 3 years of experience in Big Data architecture and Visual Analytics. Expert in building scalable ETL pipelines for 10B+ records and delivering high-performance solutions for Fortune 500 clients. Proficient in PySpark, Databricks, and SQL, with a background in frontend development for data-driven UIs. Bachelor of Technology in Computer Science with 9.16 CGPA.
             </p>
 
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-6">

@@ -55,7 +55,7 @@ export default function Experience() {
 
                   <div className="hover-elevate overflow-visible rounded-xl border border-border/70 bg-card/90 backdrop-blur-sm shadow-sm">
                     <div className="p-6">
-                      <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
+                      <div className="mb-3 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                         <div>
                           {exp.previousRole ? (
                             <div className="mb-1">
@@ -69,7 +69,7 @@ export default function Experience() {
                           <p className={`mt-2 text-sm font-medium ${colors.text}`}>{exp.company}</p>
                         </div>
 
-                        <div className="flex flex-col items-end text-right">
+                        <div className="flex flex-col items-start text-left md:items-end md:text-right">
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <HiCalendar className="h-4 w-4" />
                             <span>{exp.duration}</span>

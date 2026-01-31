@@ -1,6 +1,5 @@
  "use client";
 
-import Image from "next/image";
 import { HiArrowDown, HiDocumentText, HiEnvelope } from "react-icons/hi2";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
@@ -29,13 +28,11 @@ export default function Header() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
           <div className="relative">
             <div className="h-48 w-48 overflow-hidden rounded-full border-4 border-primary/20 bg-gradient-to-br from-primary/20 to-primary/5 shadow-xl md:h-64 md:w-64">
-              <Image
+              <img
                 src="/images/ProfileImage.jpg"
                 alt="Nisheet"
                 width={256}
                 height={256}
-                sizes="(min-width: 768px) 256px, 192px"
-                priority
                 className="h-full w-full object-cover"
                 data-testid="img-avatar"
               />
@@ -43,13 +40,13 @@ export default function Header() {
           </div>
 
           <div className="flex-1 text-center md:text-left">
-            <h1 className="mb-4 text-5xl font-bold tracking-tight md:text-7xl">
+            <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-7xl">
               <span className="bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
                 Nisheet
               </span>
             </h1>
 
-            <p className="mb-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mb-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Data Analyst with 3 years of experience in Big Data architecture and Visual Analytics. Expert in building scalable ETL pipelines for 10B+ records and delivering high-performance solutions for Fortune 500 clients. Proficient in PySpark, Databricks, and SQL, with a background in frontend development for data-driven UIs. Bachelor of Technology in Computer Science with 9.16 CGPA.
             </p>
 

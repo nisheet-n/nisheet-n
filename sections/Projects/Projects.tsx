@@ -4,7 +4,7 @@ import { projects } from "@/constants/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative bg-muted/30 py-16 md:py-20" data-testid="section-projects">
+    <section id="projects" className="relative bg-muted/30 py-12 sm:py-14 md:py-20" data-testid="section-projects">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <svg className="absolute right-16 top-8 h-40 w-40 text-purple-500/5 dark:text-purple-400/10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M9 3h6" />
@@ -22,9 +22,9 @@ export default function Projects() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-8">
-        <div className="mb-8 flex items-center gap-3">
+        <div className="mb-6 flex items-center gap-3 sm:mb-7 md:mb-8">
           <HiCodeBracketSquare className="h-6 w-6 text-primary" />
-          <h2 className="text-3xl font-semibold md:text-4xl">Projects</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Projects</h2>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -34,11 +34,11 @@ export default function Projects() {
               className="hover-elevate overflow-visible rounded-xl border border-border/50 bg-card"
               data-testid={`project-card-${index}`}
             >
-              <div className="p-6">
+              <div className="p-4 sm:p-5 md:p-6">
                 <div className="mb-4">
                   <div className="mb-2 flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="text-xl font-semibold">{project.title}</h3>
+                      <h3 className="text-lg font-semibold sm:text-xl">{project.title}</h3>
                       <p className="text-sm text-muted-foreground">{project.description}</p>
                     </div>
                     <div className="flex items-center gap-2">

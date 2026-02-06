@@ -25,7 +25,7 @@ export default function Recognition() {
           </span>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Recognition</p>
-            <h2 className="text-2xl font-semibold">Awards & Highlights</h2>
+            <h2 className="text-xl font-semibold sm:text-2xl">Awards & Highlights</h2>
           </div>
         </div>
 

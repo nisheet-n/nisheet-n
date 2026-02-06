@@ -14,20 +14,20 @@ export default function Header() {
   return (
     <section
       id="about"
-      className="relative flex min-h-[calc(100vh-4.5rem)] flex-col items-center justify-center overflow-hidden px-4 pt-20 pb-8 md:px-8 md:pt-24 md:pb-10"
+      className="relative flex h-[calc(100vh-4.5rem)] flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-6 sm:pt-20 sm:pb-8 md:px-8 md:pt-24 md:pb-10"
       data-testid="section-hero"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 h-56 w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/18 blur-3xl dark:bg-blue-500/28" />
+        <div className="absolute left-1/2 top-1/2 h-56 w-full max-w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/18 blur-3xl dark:bg-blue-500/28" />
         <div className="absolute bottom-0 left-0 h-48 w-full">
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-background via-background/50 to-transparent" />
         </div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl">
-        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+        <div className="flex flex-col items-center gap-6 sm:gap-7 md:flex-row md:gap-12">
           <div className="relative">
-            <div className="h-48 w-48 overflow-hidden rounded-full border-4 border-primary/20 bg-gradient-to-br from-primary/20 to-primary/5 shadow-xl md:h-64 md:w-64">
+            <div className="h-40 w-40 overflow-hidden rounded-full border-4 border-primary/20 bg-gradient-to-br from-primary/20 to-primary/5 shadow-xl md:h-56 md:w-56">
               <img
                 src="/images/ProfileImage.jpg"
                 alt="Nisheet"
@@ -40,13 +40,13 @@ export default function Header() {
           </div>
 
           <div className="flex-1 text-center md:text-left">
-            <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-7xl">
+            <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               <span className="bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
                 Nisheet
               </span>
             </h1>
 
-            <p className="mb-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mb-6 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg">
               Data Analyst with 3 years of experience in Big Data architecture and Visual Analytics. Expert in building scalable ETL pipelines for 10B+ records and delivering high-performance solutions for Fortune 500 clients. Proficient in PySpark, Databricks, and SQL, with a background in frontend development for data-driven UIs. Bachelor of Technology in Computer Science with 9.16 CGPA.
             </p>
 
@@ -95,7 +95,7 @@ export default function Header() {
           const element = document.querySelector("#experience");
           if (element) element.scrollIntoView({ behavior: "smooth" });
         }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground transition hover:text-foreground"
+        className="mt-8 flex items-center justify-center animate-bounce cursor-pointer text-muted-foreground transition hover:text-foreground"
         aria-label="Scroll down"
         data-testid="button-scroll-down"
       >

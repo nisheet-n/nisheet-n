@@ -11,7 +11,7 @@ const iconMap = {
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="relative bg-muted/30 py-16 md:py-20" data-testid="section-certifications">
+    <section id="certifications" className="relative bg-muted/30 py-12 sm:py-14 md:py-20" data-testid="section-certifications">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <svg className="absolute bottom-10 left-12 h-24 w-24 text-amber-500/5 dark:text-amber-400/10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <circle cx="12" cy="8" r="4" />
@@ -26,9 +26,9 @@ export default function Certifications() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-8">
-        <div className="mb-8 flex items-center gap-3">
+        <div className="mb-6 flex items-center gap-3 sm:mb-7 md:mb-8">
           <HiAcademicCap className="h-6 w-6 text-primary" />
-          <h2 className="text-3xl font-semibold md:text-4xl">Certifications</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Certifications</h2>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -40,7 +40,7 @@ export default function Certifications() {
                 className="hover-elevate overflow-visible rounded-xl border border-border/50 bg-card"
                 data-testid={`certification-item-${index}`}
               >
-                <div className="p-6">
+                <div className="p-4 sm:p-5 md:p-6">
                   <div className="flex items-start gap-4">
                     <div className={`rounded-lg bg-muted p-3 ${cert.iconColor}`}>
                       <Icon className="h-6 w-6" />

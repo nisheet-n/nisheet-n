@@ -53,7 +53,7 @@ export default function Testimonials() {
   }, [currentSlide, totalReal]);
 
   return (
-    <section id="testimonials" className="relative pb-16" data-testid="section-testimonials">
+    <section id="testimonials" className="relative pb-12 sm:pb-14 md:pb-16" data-testid="section-testimonials">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <svg className="absolute left-12 top-6 h-24 w-24 text-purple-500/5 dark:text-purple-400/10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M7 9h10M7 13h7" strokeLinecap="round" />
@@ -88,7 +88,7 @@ export default function Testimonials() {
                     data-testid={`testimonial-slide-${index}`}
                   >
                     <div
-                      className={`relative flex h-full flex-col justify-center overflow-hidden rounded-xl p-6 transition-all duration-300 ${
+                      className={`relative flex h-full flex-col justify-center overflow-hidden rounded-xl p-4 sm:p-5 md:p-6 transition-all duration-300 ${
                         isActive
                           ? "border-2 border-primary/25 bg-gradient-to-br from-card via-card to-primary/5 shadow-xl"
                           : "border border-border/50 bg-card"
@@ -124,7 +124,7 @@ export default function Testimonials() {
                           </a>
                         </div>
 
-                        <p className="mb-2 text-sm leading-relaxed text-foreground/85">
+                        <p className="mb-2 text-sm leading-relaxed text-foreground/85 md:text-base">
                           {testimonial.message}
                         </p>
                         <p className="text-right text-xs text-muted-foreground/70">{testimonial.date}</p>

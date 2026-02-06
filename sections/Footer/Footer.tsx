@@ -13,12 +13,12 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="w-full border-t border-border bg-muted/30 py-8 md:py-10"
+      className="w-full border-t border-border bg-muted/30 py-6 sm:py-7 md:py-10"
       data-testid="section-contact"
     >
       <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
-        <div className="mx-auto mb-5 max-w-2xl">
-          <h2 className="text-3xl font-semibold md:text-4xl">Contact me</h2>
+        <div className="mx-auto mb-4 max-w-2xl sm:mb-5">
+          <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Contact me</h2>
           <p className="mt-2 text-sm text-muted-foreground">
             Want to collaborate or chat? Reach out anytime.
           </p>

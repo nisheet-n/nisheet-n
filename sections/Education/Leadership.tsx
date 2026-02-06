@@ -27,7 +27,7 @@ export default function Leadership() {
           </span>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Leadership</p>
-            <h2 className="text-2xl font-semibold">Ownership & Mentorship</h2>
+            <h2 className="text-xl font-semibold sm:text-2xl">Ownership & Mentorship</h2>
           </div>
         </div>
 

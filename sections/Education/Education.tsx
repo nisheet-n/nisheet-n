@@ -13,7 +13,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section id="education" className="relative pt-16 pb-6 md:pt-20 md:pb-6" data-testid="section-education">
+    <section id="education" className="relative pt-12 pb-4 sm:pt-14 sm:pb-5 md:pt-20 md:pb-6" data-testid="section-education">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <svg className="absolute right-20 top-20 h-36 w-36 text-blue-500/5 dark:text-blue-400/10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M3 6h18v12H3z" />
@@ -30,9 +30,9 @@ export default function Education() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-8">
-        <div className="mb-8 flex items-center gap-3">
+        <div className="mb-6 flex items-center gap-3 sm:mb-7 md:mb-8">
           <HiAcademicCap className="h-6 w-6 text-primary" />
-          <h2 className="text-3xl font-semibold md:text-4xl">Education</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Education</h2>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -42,7 +42,7 @@ export default function Education() {
               className="hover-elevate overflow-visible rounded-xl border border-border/50 bg-card"
               data-testid={`education-item-${index}`}
             >
-              <div className="p-6">
+              <div className="p-4 sm:p-5 md:p-6">
                 <div className="mb-1 flex items-start justify-between gap-2">
                   <h3 className="font-semibold">{edu.institution}</h3>
                   {edu.highlight && (
@@ -54,7 +54,7 @@ export default function Education() {
                 <p className="mb-3 text-sm text-muted-foreground">{edu.degree}</p>
 
                 <div className="mb-2 flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-primary md:text-5xl">{edu.cgpa}</span>
+                  <span className="text-3xl font-bold text-primary sm:text-4xl md:text-5xl">{edu.cgpa}</span>
                   <span className="text-sm text-muted-foreground">{edu.cgpaLabel}</span>
                 </div>
 

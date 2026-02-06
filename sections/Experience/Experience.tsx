@@ -20,7 +20,7 @@ const getColorClasses = (color: "green" | "orange") => {
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-16 md:py-20" data-testid="section-experience">
+    <section id="experience" className="relative py-12 sm:py-14 md:py-20" data-testid="section-experience">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <svg className="absolute right-10 top-16 hidden h-32 w-32 text-indigo-500/5 dark:text-indigo-400/10 md:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" />
@@ -38,9 +38,9 @@ export default function Experience() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-8">
-        <div className="mb-8 flex items-center gap-3">
+        <div className="mb-6 flex items-center gap-3 sm:mb-7 md:mb-8">
           <HiBriefcase className="h-6 w-6 text-primary" />
-          <h2 className="text-3xl font-semibold md:text-4xl">Experience</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Experience</h2>
         </div>
 
         <div className="relative">
@@ -54,16 +54,16 @@ export default function Experience() {
                   <div className={`absolute left-[12px] top-[52px] bottom-[-56px] w-1 rounded-full ${colors.line} md:left-[20px]`} />
 
                   <div className="hover-elevate overflow-visible rounded-xl border border-border/70 bg-card/90 backdrop-blur-sm shadow-sm">
-                    <div className="p-6">
+                    <div className="p-4 sm:p-5 md:p-6">
                       <div className="mb-3 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                         <div>
                           {exp.previousRole ? (
                             <div className="mb-1">
                               <span className="text-base text-muted-foreground line-through">{exp.previousRole}</span>
-                              <h3 className="text-xl font-semibold">{exp.role}</h3>
+                              <h3 className="text-lg font-semibold sm:text-xl">{exp.role}</h3>
                             </div>
                           ) : (
-                            <h3 className="text-xl font-semibold">{exp.role}</h3>
+                            <h3 className="text-lg font-semibold sm:text-xl">{exp.role}</h3>
                           )}
 
                           <p className={`mt-2 text-sm font-medium ${colors.text}`}>{exp.company}</p>

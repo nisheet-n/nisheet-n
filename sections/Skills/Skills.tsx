@@ -1,4 +1,4 @@
-import { HiChartBar, HiCog6Tooth, HiSwatch, HiWrenchScrewdriver } from "react-icons/hi2";
+import { WrenchScrewdriverIcon } from "@/components/icons/CategoryIcons";
 import { skillCategories } from "@/constants/skills";
 
 export default function Skills() {
@@ -23,7 +23,7 @@ export default function Skills() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-8">
         <div className="mb-6 flex items-center gap-3 sm:mb-7 md:mb-8">
-          <HiWrenchScrewdriver className="h-6 w-6 text-primary" />
+          <WrenchScrewdriverIcon className="h-6 w-6 text-primary" />
           <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Skills</h2>
         </div>
 
@@ -55,7 +55,11 @@ export default function Skills() {
                       }`}
                     >
                       {skill.icon && (
-                        <skill.icon className={`h-4 w-4 ${skill.featured ? category.color : "text-muted-foreground"}`} />
+                        <img
+                          src={skill.icon}
+                          alt={skill.name}
+                          className="h-4 w-4 object-contain"
+                        />
                       )}
                       <span className={`text-sm ${skill.featured ? "font-medium" : ""}`}>{skill.name}</span>
                     </div>

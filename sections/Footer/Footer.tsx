@@ -1,10 +1,10 @@
 import { HiDocumentText, HiEnvelope } from "react-icons/hi2";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons/CategoryIcons";
 import { socialLinks } from "@/constants/socialLinks";
 
 const iconMap = {
-  GitHub: SiGithub,
-  LinkedIn: SiLinkedin,
+  GitHub: GitHubIcon,
+  LinkedIn: LinkedInIcon,
   Email: HiEnvelope,
   Resume: HiDocumentText,
 };

@@ -1,5 +1,5 @@
 import { HiArrowTopRightOnSquare, HiCheck, HiCodeBracketSquare, HiGlobeAsiaAustralia } from "react-icons/hi2";
-import { SiGithub } from "react-icons/si";
+import { GitHubIcon } from "@/components/icons/CategoryIcons";
 import { projects } from "@/constants/projects";
 
 export default function Projects() {
@@ -51,7 +51,7 @@ export default function Projects() {
                           className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-foreground transition hover:bg-muted"
                           data-testid={`button-github-${index}`}
                         >
-                          <SiGithub className="h-4 w-4" />
+                          <GitHubIcon className="h-4 w-4" />
                         </a>
                       )}
 

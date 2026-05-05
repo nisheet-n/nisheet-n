@@ -53,7 +53,7 @@ export const projects: Project[] = [
       "Real-time data refresh with optimized query performance",
     ],
     liveUrl: "https://public.tableau.com/views/ParisOlympic2024-WinningForAnotherFlag/Overview",
-    logsUrl: "/Paris_Olympic_Data_Preparation.html",
+    logsUrl: "/Paris_Olympic_Data_Preparation_Logs.html",
   },
   {
     title: "Muso",

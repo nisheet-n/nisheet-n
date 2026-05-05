@@ -1,12 +1,12 @@
- "use client";
+"use client";
 
 import { HiArrowDown, HiDocumentText, HiEnvelope } from "react-icons/hi2";
-import { SiGithub, SiLinkedin } from "react-icons/si";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons/CategoryIcons";
 
 const socialLinks = [
   { icon: HiEnvelope, href: "mailto:nisheet.dev@gmail.com", label: "Email" },
-  { icon: SiGithub, href: "https://github.com/nisheet-n", label: "GitHub" },
-  { icon: SiLinkedin, href: "https://linkedin.com/in/nisheet2000", label: "LinkedIn" },
+  { icon: GitHubIcon, href: "https://github.com/nisheet-n", label: "GitHub" },
+  { icon: LinkedInIcon, href: "https://linkedin.com/in/nisheet2000", label: "LinkedIn" },
   { icon: HiDocumentText, href: "/Nisheet_Resume.pdf", label: "Resume" },
 ];
 

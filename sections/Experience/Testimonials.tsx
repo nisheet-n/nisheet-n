@@ -1,8 +1,8 @@
- "use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { HiChatBubbleLeft } from "react-icons/hi2";
-import { SiLinkedin } from "react-icons/si";
+import { LinkedInIcon } from "@/components/icons/CategoryIcons";
 import { testimonials } from "@/constants/testimonials";
 
 export default function Testimonials() {
@@ -120,7 +120,7 @@ export default function Testimonials() {
                             className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0A66C2]/10 text-[#0A66C2] transition-colors hover:bg-[#0A66C2] hover:text-white"
                             data-testid={`linkedin-${testimonial.from.split(" ")[0].toLowerCase()}`}
                           >
-                            <SiLinkedin className="h-4 w-4" />
+                            <LinkedInIcon className="h-4 w-4" />
                           </a>
                         </div>
 
